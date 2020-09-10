@@ -1,0 +1,19 @@
+.role-title {
+    justify-content: center;
+}
+.name {
+    text-align: center;
+}
+.row-about-us {
+    justify-content: center;
+}
+.card {
+    border-radius: 20px;
+}
+.img-profile {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    align-self: center;
+    margin-top: 1rem;
+}
