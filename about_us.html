@@ -6,51 +6,52 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link rel="stylesheet" href="styles/main.css">
         <link rel="stylesheet" href="styles/about_us.css">
-        <link href="https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;531;600;700;800;900&display=swap" rel="stylesheet">
     </head>
 
     <body>
-        <header>
-            <p>Crescendo com Saúde</p>
-            <img src="img/background_pineapple.png" alt="Abacaxis">
-        </header>
-
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="menu-nav">
-           
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active dropdown mr-5">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Quiz
-                        </a>
-                        <div class="dropdown-menu" id="drop-quiz" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item " id="drop-itens" href="#">Monte o seu café da manhã</a>
-                            <a class="dropdown-item" id="drop-itens" href="#">Monte o seu almoço</a>
-                            <a class="dropdown-item" id="drop-itens" href="#">Monte o seu jantar</a>
-                        <div class="dropdown-divider"></div>
-                           <a class="dropdown-item" id="drop-itens" href="#">Algo q vc vai me pedir futuramente</a>
-                        </div>
-                    </li>
-                </ul>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+    
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="menu-nav">
+            
+            <a class="navbar-brand mr-auto" href="index.html"><img id="logo" src="img/nav-logo.png" alt=""></a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ml-auto">
+                    
+                    <li class="nav-item active dropdown mr-5">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Quiz
+                        </a>
+                        <div class="dropdown-menu" id="drop-quiz" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item " id="drop-itens" href="breakfast.html">Monte o seu café da manhã</a>
+                            <a class="dropdown-item" id="drop-itens" href="">Monte o seu almoço</a>
+                            <a class="dropdown-item" id="drop-itens" href="#">Monte o seu jantar</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" id="drop-itens" href="#">Algo q vc vai me pedir futuramente</a>
+                        </div>
+                    </li>
                     <li class="nav-item active mr-5">
                         <a class="nav-link" href="#">Alimentação <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item mr-5 active">
                         <a class="nav-link" href="about_us.html">Quem somos <span class="sr-only">(current)</span></a>
                     </li>
+                    <li>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-                </form>
             </div>
+                
+            
         </nav>
-        <div class="container">
+        <div class="container first-content">
             <div class="row mt-5 role-title">
                 <h4>Orientadoras</h4>
                 
@@ -59,7 +60,7 @@
 
                 <div class="col-sm-4">
                     <div class="card">
-                        <img src="" alt="" class="card-img-top">
+                        <img src="" alt="" class="card-img-top mx-3">
                         <div class="card-body">
                             <h4 class="card-title name">Orientadora</h4>
                             <h6 class="card-subtitle text-muted mb-4">Médica especialista em ........</h6>
@@ -70,7 +71,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="card">
-                        <img src="" alt="" class="card-img-top">
+                        <img src="" alt="" class="card-img-top mx-3">
                         <div class="card-body">
                             <h4 class="card-title name">Orientadora</h4>
                             <h6 class="card-subtitle text-muted mb-4">Médica especialista em ........</h6>
@@ -88,7 +89,7 @@
             <div class="row">
                 <div class="col-sm-3">
                     <div class="card">
-                        <img src="" alt="" class="card-img-top">
+                        <img src="" alt="" class="card-img-top mx-3">
                         <div class="card-body">
                             <h4 class="card-title name">Orientadora</h4>
                             <h6 class="card-subtitle text-muted mb-4">Estudante de medicina da UNIBH</h6>
@@ -99,7 +100,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="card">
-                        <img src="" alt="" class="card-img-top">
+                        <img src="" alt="" class="card-img-top mx-3">
                         <div class="card-body">
                             <h4 class="card-title name">Orientadora</h4>
                             <h6 class="card-subtitle text-muted mb-4">Estudante de medicina da UNIBH</h6>
@@ -110,7 +111,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="card">
-                        <img src="" alt="" class="card-img-top">
+                        <img src="" alt="" class="card-img-top mx-3">
                         <div class="card-body">
                             <h4 class="card-title name">Orientadora</h4>
                             <h6 class="card-subtitle text-muted mb-4">Estudante de medicina da UNIBH</h6>
@@ -121,7 +122,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="card">
-                        <img src="" alt="" class="card-img-top">
+                        <img src="" alt="" class="card-img-top mx-3">
                         <div class="card-body">
                             <h4 class="card-title name">Orientadora</h4>
                             <h6 class="card-subtitle text-muted mb-4">Estudante de medicina da UNIBH</h6>
@@ -135,7 +136,7 @@
             <div class="row row-about-us mt-3">
                 <div class="col-sm-3">
                     <div class="card">
-                        <img src="" alt="" class="card-img-top">
+                        <img src="" alt="" class="card-img-top mx-3">
                         <div class="card-body">
                             <h4 class="card-title name">Orientadora</h4>
                             <h6 class="card-subtitle text-muted mb-4">Estudante de medicina da UNIBH</h6>
@@ -146,7 +147,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="card">
-                        <img src="" alt="" class="card-img-top">
+                        <img src="" alt="" class="card-img-top mx-3">
                         <div class="card-body">
                             <h4 class="card-title name">Orientadora</h4>
                             <h6 class="card-subtitle text-muted mb-4">Estudante de medicina da UNIBH</h6>
@@ -157,7 +158,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="card">
-                        <img src="" alt="" class="card-img-top">
+                        <img src="" alt="" class="card-img-top mx-3">
                         <div class="card-body">
                             <h4 class="card-title name">Orientadora</h4>
                             <h6 class="card-subtitle text-muted mb-4">Estudante de medicina da UNIBH</h6>
@@ -168,14 +169,14 @@
                 </div>
             </div>
             <div class="row mt-5 role-title">
-                <h4>Desenvonvedor</h4>
+                <h4>Desenvolvedor</h4>
                 
             </div>
             <div class="row row-about-us mb-4">
 
                 <div class="col-sm-4">
                     <div class="card">
-                        <img src="img/dev.png" alt="Thiago (desenvonvedor gato)" class="img-profile">
+                        <img src="img/dev.png" alt="Thiago (desenvonvedor gato)" class="card-img-top mx-5 img-profile">
                         <div class="card-body">
                             <h4 class="card-title name">Thiago Hagge</h4>
                             <h6 class="card-subtitle text-muted mb-4">Desenvolvedor e gato</h6>

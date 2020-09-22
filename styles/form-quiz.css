@@ -1,0 +1,56 @@
+.form-check {
+    position: relative;
+}
+
+.form-check-input {
+    margin-left: 20px;
+}
+#how-old, #food {
+    display: none;
+}
+
+.quiz-food {
+    text-align: center;
+}
+.each-food {
+    background-color: rgba(250, 124, 146, 0.8);
+    border-radius: 15px;
+    text-align: center;
+    border: solid 1px black;
+    /* margin: 0 40px; */
+
+}
+.img-boy-or-girl {
+    width: 200px;
+}
+.button-next {
+    background-color: var(--color-green);
+    border: solid var(--color-green) 3px;
+    margin-right: 10rem;
+    margin-left: 90%;
+}
+.button-next:hover {
+    background-color: white;
+    border: solid var(--color-green) 3px;
+    color: var(--color-green);
+    font-weight: 800;
+    margin-right: 10rem;
+}
+#age {
+    width: 35rem;
+    height: 20rem;
+    margin-top: 80px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,.125);
+}
+#age img {
+    width: 20rem;
+    float: right;
+}
+#age-box {
+    position: relative;
+    top: 30%;
+    font-weight: 700;
+}
+    

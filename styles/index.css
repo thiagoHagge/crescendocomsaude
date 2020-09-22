@@ -1,0 +1,7 @@
+.collor-control {
+    background-color: black;
+    border-radius: 50%;
+}
+.carousel-indicators {
+    transform: translateY(10px);
+}
