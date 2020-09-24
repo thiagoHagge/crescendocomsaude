@@ -6,3 +6,7 @@ $("#button-age").click(function() {
     $("#how-old").hide();
     $("#food").show();
 })
+$("#button-food").click(function() {
+    $("#food").hide();
+    $("#drink").show();
+})

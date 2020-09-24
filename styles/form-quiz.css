@@ -5,8 +5,21 @@
 .form-check-input {
     margin-left: 20px;
 }
-#how-old, #food {
+#how-old, #food, #drink {
     display: none;
+}
+.title-quiz {
+  font-family: 'Londrina Solid', cursive;
+  font-size: 40px;
+  font-weight: 700;
+
+  background-color: white;
+  border: solid 3px whitesmoke;
+  border-radius: 20px;
+
+  padding-left: 20px;
+  padding-right:  20px;
+  text-align: center;
 }
 
 .quiz-food {
@@ -16,6 +29,7 @@
     width: 200px;
 }
 .button-next {
+    color: white;
     background-color: var(--color-green);
     border: solid var(--color-green) 3px;
     margin-right: 10rem;
@@ -28,10 +42,16 @@
     font-weight: 800;
     margin-right: 10rem;
 }
+.button-next:focus, .button-next.active {
+  background-color: var(--color-green-lighter);
+  border: solid var(--color-green) 3px;
+  color: var(--color-green);
+  font-weight: 800;
+  margin-right: 10rem;
+}
 #age {
     width: 35rem;
     height: 20rem;
-    margin-top: 80px;
     background-color: white;
     border-radius: 10px;
     border: 1px solid rgba(0,0,0,.125);
@@ -45,4 +65,67 @@
     top: 30%;
     font-weight: 700;
 }
-    
+
+
+
+.checkbox-input,
+.checkbox-input-boy,
+.checkbox-input-girl {
+  display: none;
+}
+
+.checkbox-text {
+  text-align: center;   
+}
+.checkbox-label, .checkbox-text, .checkbox-text--description {
+    transform: transition(all .4s ease);
+}
+  
+.checkbox-label {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid darken(white, 15%);
+}    
+.checkbox-label:before {
+  content: "";
+  position: absolute;
+  top: 75%;
+  right: 16px;
+  opacity: 0;
+  background-color: #2196F3;
+  background-image: url(http://lorenzodianni.io/codepen/icon/done--white.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  border-radius: 50%;
+  transform: translate(0%, -50%);
+  transition: all .4s ease;
+}
+
+  
+.checkbox-text--title {
+    font-size: 20px;
+    font-weight: 700;
+    display: inline;
+}
+.checkbox-text--description {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #2196F3;
+}
+  
+.checkbox-input:checked + .checkbox-label {
+  background-color: var(--color-card-light);
+
+}
+.checkbox-input-boy:checked + .checkbox-label {
+  background-color: var(--color-blue-light);
+
+}
+.checkbox-input-girl:checked + .checkbox-label {
+  background-color: var(--color-pink-light);
+
+}

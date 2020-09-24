@@ -1,10 +1,14 @@
 :root {
     --color-blue: #6EC4D8;
-    --color-pink: #FA7C92;
+    --color-blue-light: #6EC4D898;
+    --color-pink: #fa7c91;
+    --color-pink-light: #fa7c9198;
     --color-bg: #FFF;
     --color-blue-hover: #6EB5D8;
-    --color-card: #FFF7C0;
+    --color-card: #ffdd00;
+    --color-card-light: #ffdd0098;
     --color-green: #10DA39;
+    --color-green-lighter: #10da382f;
 }
 body {
     background-image: url(../img/background.png);

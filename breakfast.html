@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="styles/main.css">
         <link rel="stylesheet" href="styles/form-quiz.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;531;600;700;800;900&display=swap" rel="stylesheet">
-       
+        <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -56,37 +56,45 @@
         <form class="mb-2" method="POST" action="registra.php">
             <div class="container first-content" id="boy-or-girl">
                 <div class="row">
+                    <p class="title-quiz mr-auto ml-auto mt-2">Você é menino ou menina?</p>
+                </div>
+                <div class="row">
 
                     <div class="form-check form-check-inline ml-auto">
                         <div class="card mt-4">
 
-                            <label for="boy"><img class="card-img-top img-boy-or-girl" src="img/boy.png" alt=""></label>
-                            <div class="card-body">
-
-                                <input class="form-check-input" type="radio" name="gender" id="boy" value="M">
-                                <label class="form-check-label" for="boy"><h5 class="card-title">Menino</h5></label>
-                            </div>
+                            <label class="mb-0" for="boy"><img class="card-img-top img-boy-or-girl" src="img/boy.png" alt=""></label>
+                            <input class="checkbox-input-boy" type="radio" name="gender" id="boy" value="M">
+                            <label class="checkbox-label mb-0" for="boy">
+                                <div class="card-body checkbox-text">
+                                    <p class="checkbox-text--title">Menino</p>
+                                </div>
+                            </label>
                         </div>
                     </div>
                     <div class="form-check form-check-inline mr-auto">
                         <div class="card mt-4">
 
-                            <label for="girl"><img class="card-img-top img-boy-or-girl" src="img/girl.png" alt=""></label>
-                            <div class="card-body">
-
-                                <input class="form-check-input" type="radio" name="gender" id="girl" value="F">
-                                <label class="form-check-label" for="girl"><h5 class="card-title">Menina</h5></label>
-                            </div>
+                            <label class="mb-0" for="girl"><img class="card-img-top img-boy-or-girl" src="img/girl.png" alt=""></label>
+                            <input class="checkbox-input-girl" type="radio" name="gender" id="girl" value="F">
+                            <label class="checkbox-label mb-0" for="girl">
+                            <div class="card-body checkbox-text">
+                                    <p class="checkbox-text--title">Menina</p>
+                                </div>
+                            </label>
                         </div>
                         
                         
                     </div>
                 </div>
                 <div class="form-group row">
-                    <input type="button" class="btn btn-primary ml-auto mt-4 button-next" id="button-gender" value="Próximo" />
+                    <input type="button" class="btn ml-auto mt-4 button-next" id="button-gender" value="Próximo" />
                 </div>
             </div>
             <div class="container first-content" id="how-old">
+                <div class="row">
+                    <p class="title-quiz mr-auto ml-auto mt-2">Quantos anos você tem?</p>
+                </div>
                 <div class="row">
                     
                     <div class="mx-auto" id="age">
@@ -114,36 +122,263 @@
             
             
                 <div class="form-group row">
-                    <input type="button" class="btn btn-primary ml-auto mt-4 button-next" id="button-age" value="Próximo" />
+                    <input type="button" class="btn ml-auto mt-4 button-next" id="button-age" value="Próximo" />
                 </div>
             </div>
             <div class="container first-content" id="food">
-                <div class="jumbotron jumbotron-fluid mt-3 rounded-pill">
-                    <div class="container">
-                        <h1 class="display-4">Escolha sua comida</h1>
-                        <p class="lead"></p>
-                    </div>
+                <div class="row">
+                    <p class="title-quiz mr-auto ml-auto mt-2">O que costuma comer no café da manhã?</p>
                 </div>
                 <div class="row mb-2">
-                    <div class="col-sm-4 col-lg-3 col-xl-2 mb-2">
+                    <div class="col-sm-6 col-lg-3 col-xl-2 mb-2">
                         <div class="card">
-
-                            <label class="quiz-food" for="biscoitos">
-                                <img class="card-img-top" src="img/dev.png" alt="">
-                            </label>
-                        <div class="card-body">
-                            <input type="checkbox"  name="biscoitos" id="biscoitos">
-                            <label for="biscoitos">
-                                <p>Biscoito</p>
+                            <label class="mb-0" for="pao"><img src="img/dev.png" alt="" class="card-img-top"></label>
+                            <input type="checkbox" name="food" id="pao" class="checkbox-input"/>
+                            <label for="pao" class="checkbox-label mb-0  ">
+                                <div class="card-body checkbox-text">
+                                    <p class="checkbox-text--title">Pão</p>
+                                </div>
                             </label>
                         </div>
                     </div>
+                    <div class="col-sm-6 col-lg-3 col-xl-2 mb-2">
+                        <div class="card">
+                            <label class="mb-0" for="manteiga"><img src="img/dev.png" alt="" class="card-img-top"></label>
+                            <input type="checkbox" name="food" id="manteiga" class="checkbox-input"/>
+                            <label for="manteiga" class="checkbox-label mb-0  ">
+                                <div class="card-body checkbox-text">
+                                    <p class="checkbox-text--title">Manteiga</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 col-xl-2 mb-2">
+                        <div class="card">
+                            <label class="mb-0" for="queijo"><img src="img/dev.png" alt="" class="card-img-top"></label>
+                            <input type="checkbox" name="food" id="queijo" class="checkbox-input"/>
+                            <label for="queijo" class="checkbox-label mb-0  ">
+                                <div class="card-body checkbox-text">
+                                    <p class="checkbox-text--title">Queijo</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 col-xl-2 mb-2">
+                        <div class="card">
+                            <label class="mb-0" for="presunto"><img src="img/dev.png" alt="" class="card-img-top"></label>
+                            <input type="checkbox" name="food" id="presunto" class="checkbox-input"/>
+                            <label for="presunto" class="checkbox-label mb-0  ">
+                                <div class="card-body checkbox-text">
+                                    <p class="checkbox-text--title">Presunto</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 col-xl-2 mb-2">
+                        <div class="card">
+                            <label class="mb-0" for="salame"><img src="img/dev.png" alt="" class="card-img-top"></label>
+                            <input type="checkbox" name="food" id="salame" class="checkbox-input"/>
+                            <label for="salame" class="checkbox-label mb-0  ">
+                                <div class="card-body checkbox-text">
+                                    <p class="checkbox-text--title">Salame</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 col-xl-2 mb-2">
+                        <div class="card">
+                            <label class="mb-0" for="ovo"><img src="img/dev.png" alt="" class="card-img-top"></label>
+                            <input type="checkbox" name="food" id="ovo" class="checkbox-input"/>
+                            <label for="ovo" class="checkbox-label mb-0  ">
+                                <div class="card-body checkbox-text">
+                                    <p class="checkbox-text--title">Ovos</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 col-xl-2 mb-2">
+                        <div class="card">
+                            <label class="mb-0" for="biscoito"><img src="img/dev.png" alt="" class="card-img-top"></label>
+                            <input type="checkbox" name="food" id="biscoito" class="checkbox-input"/>
+                            <label for="biscoito" class="checkbox-label mb-0  ">
+                                <div class="card-body checkbox-text">
+                                    <p class="checkbox-text--title">Biscoito</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 col-xl-2 mb-2">
+                        <div class="card">
+                            <label class="mb-0" for="salgadinho"><img src="img/dev.png" alt="" class="card-img-top"></label>
+                            <input type="checkbox" name="food" id="salgadinho" class="checkbox-input"/>
+                            <label for="salgadinho" class="checkbox-label mb-0  ">
+                                <div class="card-body checkbox-text">
+                                    <p class="checkbox-text--title">Salgadinhos</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 col-xl-2 mb-2">
+                        <div class="card">
+                            <label class="mb-0" for="bolo"><img src="img/dev.png" alt="" class="card-img-top"></label>
+                            <input type="checkbox" name="food" id="bolo" class="checkbox-input"/>
+                            <label for="bolo" class="checkbox-label mb-0  ">
+                                <div class="card-body checkbox-text">
+                                    <p class="checkbox-text--title">Bolo</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 col-xl-2 mb-2">
+                        <div class="card">
+                            <label class="mb-0" for="cereal"><img src="img/dev.png" alt="" class="card-img-top"></label>
+                            <input type="checkbox" name="food" id="cereal" class="checkbox-input"/>
+                            <label for="cereal" class="checkbox-label mb-0  ">
+                                <div class="card-body checkbox-text">
+                                    <p class="checkbox-text--title">Cereal</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 col-xl-2 mb-2">
+                        <div class="card">
+                            <label class="mb-0" for="fruta"><img src="img/dev.png" alt="" class="card-img-top"></label>
+                            <input type="checkbox" name="food" id="fruta" class="checkbox-input"/>
+                            <label for="fruta" class="checkbox-label mb-0  ">
+                                <div class="card-body checkbox-text">
+                                    <p class="checkbox-text--title">Frutas</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 col-xl-2 mb-2">
+                        <div class="card">
+                            <label class="mb-0" for="granola"><img src="img/dev.png" alt="" class="card-img-top"></label>
+                            <input type="checkbox" name="food" id="granola" class="checkbox-input"/>
+                            <label for="granola" class="checkbox-label mb-0  ">
+                                <div class="card-body checkbox-text">
+                                    <p class="checkbox-text--title">Granola</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 col-xl-2 mb-2 mr-auto ml-auto">
+                        <div class="card">                        
+                            <label class="mb-0" for="nadaC"><img src="img/dev.png" alt="" class="card-img-top"></label>
+                            <input type="checkbox" name="food" id="nadaC" class="checkbox-input"/>
+                            <label for="nadaC" class="checkbox-label mb-0  ">
+                                <div class="card-body checkbox-text">
+                                    <p class="checkbox-text--title">Não como nessa refeição</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    
                 </div>
-                
-            
+
+                <div class="form-group row">
+                    <input type="button" class="btn ml-auto mt-4 button-next" id="button-food" value="Próximo" />
+                </div>
             </div>
-            <div class="form-group row">
-                <input type="submit" class="btn btn-primary ml-auto mt-4 button-next" id="button-submit" value="Finalizar" />
+            <div class="container first-content" id="drink">
+                <div class="row">
+                    <p class="title-quiz mr-auto ml-auto mt-2">E para beber?</p>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-sm-6 col-lg-3 mb-2">
+                        <div class="card">
+                            <label class="mb-0" for="iogurte"><img src="img/dev.png" alt="" class="card-img-top"></label>
+                            <input type="checkbox" name="drink" id="iogurte" class="checkbox-input"/>
+                            <label for="iogurte" class="checkbox-label mb-0">
+                                <div class="card-body checkbox-text">
+                                    <p class="checkbox-text--title">Iogurte</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 mb-2">
+                        <div class="card">
+                            <label class="mb-0" for="achocolatado"><img src="img/dev.png" alt="" class="card-img-top"></label>
+                            <input type="checkbox" name="drink" id="achocolatado" class="checkbox-input"/>
+                            <label for="achocolatado" class="checkbox-label mb-0">
+                                <div class="card-body checkbox-text">
+                                    <p class="checkbox-text--title">Achocolatado</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 mb-2">
+                        <div class="card">
+                            <label class="mb-0" for="cafe"><img src="img/dev.png" alt="" class="card-img-top"></label>
+                            <input type="checkbox" name="drink" id="cafe" class="checkbox-input"/>
+                            <label for="cafe" class="checkbox-label mb-0">
+                                <div class="card-body checkbox-text">
+                                    <p class="checkbox-text--title">Café</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 mb-2">
+                        <div class="card">
+                            <label class="mb-0" for="sucoI"><img src="img/dev.png" alt="" class="card-img-top"></label>
+                            <input type="checkbox" name="drink" id="sucoI" class="checkbox-input"/>
+                            <label for="sucoI" class="checkbox-label mb-0">
+                                <div class="card-body checkbox-text">
+                                    <p class="checkbox-text--title">Suco de caixinha</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 mb-2">
+                        <div class="card">
+                            <label class="mb-0" for="sucoN"><img src="img/dev.png" alt="" class="card-img-top"></label>
+                            <input type="checkbox" name="drink" id="sucoN" class="checkbox-input"/>
+                            <label for="sucoN" class="checkbox-label mb-0">
+                                <div class="card-body checkbox-text">
+                                    <p class="checkbox-text--title">Suco da Fruta</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 mb-2">
+                        <div class="card">
+                            <label class="mb-0" for="vitamina"><img src="img/dev.png" alt="" class="card-img-top"></label>
+                            <input type="checkbox" name="drink" id="vitamina" class="checkbox-input"/>
+                            <label for="vitamina" class="checkbox-label mb-0">
+                                <div class="card-body checkbox-text">
+                                    <p class="checkbox-text--title">Vitamina de Frutas</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 mb-2">
+                        <div class="card">
+                            <label class="mb-0" for="refrigerante"><img src="img/dev.png" alt="" class="card-img-top"></label>
+                            <input type="checkbox" name="drink" id="refrigerante" class="checkbox-input"/>
+                            <label for="refrigerante" class="checkbox-label mb-0">
+                                <div class="card-body checkbox-text">
+                                    <p class="checkbox-text--title">Refrigerante</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 mb-2">
+                        <div class="card">
+                            <label class="mb-0" for="nadaB"><img src="img/dev.png" alt="" class="card-img-top"></label>
+                            <input type="checkbox" name="drink" id="nadaB" class="checkbox-input"/>
+                            <label for="nadaB" class="checkbox-label mb-0">
+                                <div class="card-body checkbox-text">
+                                    <p class="checkbox-text--title">Não bebo nada</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form-group row">
+                    <input type="submit" class="btn ml-auto mt-4 button-next" id="button-submit" value="Finalizar" />
+                </div>
             </div>
         </form>
         
