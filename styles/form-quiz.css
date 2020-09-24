@@ -12,14 +12,6 @@
 .quiz-food {
     text-align: center;
 }
-.each-food {
-    background-color: rgba(250, 124, 146, 0.8);
-    border-radius: 15px;
-    text-align: center;
-    border: solid 1px black;
-    /* margin: 0 40px; */
-
-}
 .img-boy-or-girl {
     width: 200px;
 }
