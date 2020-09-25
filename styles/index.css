@@ -5,3 +5,6 @@
 .carousel-indicators {
     transform: translateY(10px);
 }
+.first-content-carousel {
+    margin-top: 70px;
+}
