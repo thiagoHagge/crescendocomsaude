@@ -1,5 +1,5 @@
-var food = ''
-var drink = ''
+var foodScore
+var drinkScore
 
 $("#button-gender").click(function() {          
     var gender = "";
@@ -38,13 +38,20 @@ $("#button-age").click(function() {
 })
 
 $("#button-food").click(function() {
+    
+    var control = 0;
     $('input:checkbox[name=food]').each(function() {
         if($(this).is(':checked')) {
-            food = food + $(this).val()
+            if(control == 0) {
+                foodScore = 0
+                control = 1 
+            }
+            foodScore += parseInt($(this).val(), 10)
+            parseInt(foodScore, 10)
         } 
     })
-
-    if (food != '') {
+    
+    if (foodScore || foodScore == 0) {
         $("#food").hide();
         $("#drink").show();
     } else {
@@ -54,13 +61,20 @@ $("#button-food").click(function() {
 })
 
 $("#button-submit").click(function() {
+
+
+    var control = 0
     $('input:checkbox[name=drink]').each(function() {
         if($(this).is(':checked')) {
-            drink = drink + $(this).val()
+            if(control == 0) {
+                drinkScore = 0
+                control = 1 
+            }
+            drinkScore += parseInt($(this).val(), 10)
+            parseInt(drinkScore, 10)
         } 
     })
-
-    if (drink != '') {
+    if (drinkScore || drinkScore == 0) {
         $('#form-quiz').submit();
         $("#button-submit").blur();
     } else {

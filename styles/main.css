@@ -7,6 +7,7 @@
     --color-blue-hover: #6EB5D8;
     --color-card: #ffdd00;
     --color-card-light: #ffdd0098;
+    --color-card-lighter: #ffdd002f;
     --color-green: #10DA39;
     --color-green-lighter: #10da382f;
 }
@@ -55,3 +56,19 @@ input, label, button {
 #navbarContent {
     background-color: var(--color-blue);
 }
+.p-0 {
+    padding: 0;
+}
+.title-box {
+    font-family: 'Londrina Solid', cursive;
+    font-size: 40px;
+    font-weight: 700;
+  
+    background-color: white;
+    border: solid 3px whitesmoke;
+    border-radius: 20px;
+  
+    padding-left: 20px;
+    padding-right:  20px;
+    text-align: center;
+  }
