@@ -2,3 +2,10 @@
     width: 18rem;
     align-items: center;
 }
+.btn-quiz {
+    font-weight: bold;
+    border-width: 3px;
+}
+.lets-page {
+    width: 100%;
+}
