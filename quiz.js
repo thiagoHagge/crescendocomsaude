@@ -1,6 +1,7 @@
 var foodScore
 var drinkScore
 
+
 $("#button-gender").click(function() {          
     var gender = "";
     $('input:radio[name=gender]').each(function() {
@@ -28,56 +29,50 @@ $("#button-age").click(function() {
 
     if (age != '') {
         $("#how-old").hide();
-        $("#food").show();
+        $("#food-page").show();
     } else {
         alert('Precisamos saber quanto anos você tem!')
         $("#button-age").blur()
     }
-
-
+    
+    
 })
 
 $("#button-food").click(function() {
-    
-    var control = 0;
-    $('input:checkbox[name=food]').each(function() {
-        if($(this).is(':checked')) {
-            if(control == 0) {
-                foodScore = 0
-                control = 1 
-            }
-            foodScore += parseInt($(this).val(), 10)
-            parseInt(foodScore, 10)
-        } 
+    var food = "";
+    $('input:checkbox[name="food[]"]').each(function() {
+        if ($(this).is(':checked')) {
+            food = $(this).val();
+            console.log(food);
+            
+        }
     })
-    
-    if (foodScore || foodScore == 0) {
-        $("#food").hide();
-        $("#drink").show();
+    console.log(food);
+             
+    if (food != "") {
+        $("#food-page").hide();
+        $("#drink-page").show();
     } else {
-        alert("Você precisa escolher uma alternativa! Caso não coma nada, selecione a última opção")
-        $("#button-food").blur()
+        alert("Você precisa escolher uma alternativa! Caso não coma nada, selecione a última opção.")
+        $("#button-food").blur();
     }
+    
+    
 })
 
 $("#button-submit").click(function() {
-
-
-    var control = 0
-    $('input:checkbox[name=drink]').each(function() {
-        if($(this).is(':checked')) {
-            if(control == 0) {
-                drinkScore = 0
-                control = 1 
-            }
-            drinkScore += parseInt($(this).val(), 10)
-            parseInt(drinkScore, 10)
-        } 
+    var drink = "";
+    $('input:checkbox[name="drink[]"]').each(function() {
+        if ($(this).is(':checked')) {
+            drink = $(this).val();
+        }
     })
-    if (drinkScore || drinkScore == 0) {
+             
+    if (drink != '') {
         $('#form-quiz').submit();
         $("#button-submit").blur();
     } else {
-        alert("Você precisa escolher uma alternativa! Caso não coma nada, selecione a última opção")
+        alert("Você precisa escolher uma alternativa! Caso não coma nada, selecione a última opção.")
+        $("#button-submit").blur();
     }
 })
