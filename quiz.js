@@ -43,7 +43,7 @@ $("#button-food").click(function() {
     $('input:checkbox[name="food[]"]').each(function() {
         if ($(this).is(':checked')) {
             food = $(this).val();
-            console.log(food);
+            console.log($(this).val());
             
         }
     })

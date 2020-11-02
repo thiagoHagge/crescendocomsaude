@@ -2,45 +2,48 @@
 require_once('db.php');
 
 $score_list = Array(
-    "noned" => -1,
-    "nonef" => -1,
-    "biscoito" => -1,
-    "cereal" => -1,
-    "fruta" => 5,
-    "pao" => 1,
-    "queijo" => 0,
-    "presunto" => -1,
-    "toddy" => -1,
-    "paodequeijo" => -1,
-    "ovo" => 5,
-    "manteiga" => -1,
-    "salgadinho" => -1,
-    "salgado" => -1,
-    "granola" => -1,
-    "salame" => -1,
-    "granola" => -1,
-    "refri" => -1,
-    "sucoF" => -1,
-    "agua" => -1,
-    "sucoC" => -1,
-    "iogurte" => -1,
-    "vitamina" => -1,
-    "cafe" => -1,
-    "leite" => -1,
-    "feijao" => -1,
-    "arroz" => -1,
-    "macarrao" => -1,
-    "batataF" => -1,
-    "hamburguer" => -1,
-    "nugget" => -1,
-    "bife" => -1,
-    "batataF" => -2,
-    "carne" => 1,
-    "bolo" => -1,
-    "frango" => 1,
-    "salada" => 3,
-    "omelete" => 2,
-    "pizza" => -2,
+    "noned" => [0, ''],
+    "nonef" => [-2, ''],
+    "biscoito" => [-1, 'm'],
+    "cereal" => [-1, 'm'],
+    "fruta" => [2, 'v'],
+    "pao" => [1, 'm'],
+    "queijo" => [1, 'l'],
+    "presunto" => [-1, 'p'],
+    "toddy" => [-2, 'g'],
+    "paodequeijo" => [1, 'm'],
+    "ovo" => [2, 'c'],
+    "manteiga" => [-1, 'g'],
+    "salgadinho" => [-2, 'g'],
+    "salgado" => [-2, 'g'],
+    "granola" => [2, 'm'],
+    "salame" => [-2, 'g'],
+    "refri" => [-2, 'g'],
+    "sucoF" => [1, 'v'],
+    "agua" => [1, ''],
+    "sucoC" => [-2, 'g'],
+    "iogurte" => [1, 'l'],
+    "vitamina" => [2, 'v'],
+    "cafe" => [-1, ''],
+    "leite" => [1, 'l'],
+    "feijao" => [1, 'le'],
+    "arroz" => [1, 'm'],
+    "macarrao" => [1, 'm'],
+    "batataF" => [-1, 'g'],
+    "hamburger" => [-1, 'g'],
+    "nugget" => [-2, 'g'],
+    "bife" => [1, 'p'],
+    "batataF" => [-2, 'g'],
+    "carne" => [1, 'p'],
+    "bolo" => [-1, 'm'],
+    "frango" => [1, 'p'],
+    "salada" => [2, 'v'],
+    "omelete" => [2, 'p'],
+    "pizza" => [-2, 'g'],
+    "verdura" => [2, 'v'],  
+    "strogonoff" => [1, 'p'],  
+    "farofa" => [0, 'm'],
+    "Bolo pronto" => [-2, 'g'],
 );
 
 $meal = $_POST['meal'];
@@ -51,17 +54,32 @@ $drink_array = $_POST['drink'];
 $food = '';
 $drink = '';
 $score = 0;
+$carb = 0;
+$protein = 0;
+$fat = 0;
+$goodmeat = 0;
 
 for($i = 0; $i < count($food_array); $i++)  {
-    $score = $score + $score_list[$food_array[$i]];
+    $score = $score + $score_list[$food_array[$i]][0];
+    if ($score_list[$food_array[$i]][1] == 'c') {
+        $carb = 1;
+    }
+    if ($score_list[$food_array[$i]][1] == 'p') {
+        $protein = 1;
+    }
+    if ($score_list[$food_array[$i]][1] == 'g') {
+        $fat = 1;
+    }
     if($i < count($food_array) - 1) {
         $food = $food.$food_array[$i].', ';
     } else {
         $food = $food.$food_array[$i];
     }
+    
 };
+$goodmeat = $carb + $protein + $fat;
 for($i = 0; $i < count($drink_array); $i++)  {
-    $score = $score + $score_list[$drink_array[$i]];
+    $score = $score + $score_list[$drink_array[$i]][0];
     if($i < count($drink_array) - 1) {
         $drink = $drink.$drink_array[$i].', ';
     } else {
@@ -83,6 +101,7 @@ mysqli_query($link, $sql);
         <title>Resultado - Crescendo com Saúde</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles/quiz.css">
         <link rel="stylesheet" href="styles/main.css">
         <link rel="stylesheet" href="styles/result.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;531;600;700;800;900&display=swap" rel="stylesheet">
@@ -140,6 +159,7 @@ mysqli_query($link, $sql);
                     <?php 
                         if($score > 0) {
                             echo "Parabéns! Sua alimentação está ótima";
+                            echo "<audio src='audio/teste.mp3' autoplay></audio>";
                         } else {
                             echo "Podemos melhorar...";
                         }
@@ -201,6 +221,17 @@ mysqli_query($link, $sql);
                             <img src="img/result-image.png" width="100%" alt="">
                 </div>
 
+            </div>
+            <div class="row">
+                <?php 
+                    if($meal == 'B') {
+                        echo "<a href='lunch.php' class='btn btn-success btn-quiz my-3 ml-auto'>Agora conte-nos sobre seu almoço</a>";
+                    }   elseif ($meal == 'L') {
+                        echo "<a href='dinner.php' class='btn btn-primary btn-quiz my-3 ml-auto'>Agora conte-nos sobre seu jantar</a>";
+                    }   elseif ($meal == 'L') {
+                        echo "<a href='breakfast.php' class='btn btn-danger btn-quiz my-3 ml-auto'>Agora conte-nos sobre seu café da manhã</a>";
+                    }
+                ?>
             </div>
     
         </div>

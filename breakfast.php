@@ -197,6 +197,17 @@
                     </div>
                     <div class="col-sm-6 col-lg-3 col-xl-2 mb-2">
                         <div class="card">
+                            <label class="mb-0" for="omelete"><img src="img/food/omelete.png" alt="Omelete" class="card-img-top"></label>
+                            <input type="checkbox" name="food[]" id="omelete" class="checkbox-input" value="omelete"/>
+                            <label for="omelete" class="checkbox-label mb-0  ">
+                                <div class="card-body checkbox-text">
+                                    <p class="checkbox-text--title">Omelete</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 col-xl-2 mb-2">
+                        <div class="card">
                             <label class="mb-0" for="biscoito"><img src="img/food/biscoito.png" alt="" class="card-img-top"></label>
                             <input type="checkbox" name="food[]" id="biscoito" class="checkbox-input" value="biscoito"/>
                             <label for="biscoito" class="checkbox-label mb-0">
