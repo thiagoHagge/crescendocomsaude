@@ -56,12 +56,12 @@
             <input type="text" display="none" name="meal" value="L">
             <div class="container first-content" id="boy-or-girl">
                 <div class="row">
-                    <p class="title-quiz mr-auto ml-auto mt-2">Você é menino ou menina?</p>
+                    <p class="title-box mr-auto ml-auto my-0">Você é menino ou menina?</p>
                 </div>
                 <div class="row">
 
                     <div class="form-check form-check-inline ml-auto">
-                        <div class="card mt-4">
+                        <div class="card mt-3">
 
                             <label class="mb-0" for="boy"><img class="card-img-top img-boy-or-girl" src="img/boy.png" alt=""></label>
                             <input class="checkbox-input-boy" type="radio" name="gender" id="boy" value="M">
@@ -127,7 +127,7 @@
             </div>
             <div class="container first-content" id="food-page">
                 <div class="row">
-                    <p class="title-quiz mr-auto ml-auto mt-2">O que costuma comer no café da manhã?</p>
+                    <p class="title-quiz mr-auto ml-auto mt-2">O que costuma comer no almoço?</p>
                 </div>
                 <div class="row mb-2">
                     <div class="col-sm-6 col-lg-3 col-xl-2 mb-2">
@@ -383,15 +383,89 @@
                 </div>
             </div>
             
-            </div>
+
         </form>
         
-
+<!--   MODAL   -->
+        <div class="modal fade" id="genderModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ops!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Você precisa escolher uma alternativa!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="ageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ops!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Precisamos saber quanto anos você tem!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="foodModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ops!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Você precisa escolher uma alternativa! Caso não coma nada, selecione a última opção.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="drinkModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ops!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Você precisa escolher uma alternativa! Caso não beba nada, selecione a última opção.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <script src="quiz.js"></script>
+        <script src="default.js"></script>
+
     </body>
 </html>

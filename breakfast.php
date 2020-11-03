@@ -55,12 +55,12 @@
             <input type="text" display="none" name="meal" value="B">
             <div class="container first-content" id="boy-or-girl">
                 <div class="row">
-                    <p class="title-box mr-auto ml-auto mt-2">Você é menino ou menina?</p>
+                    <p class="title-box mr-auto ml-auto my-0">Você é menino ou menina?</p>
                 </div>
                 <div class="row">
 
                     <div class="form-check form-check-inline ml-auto">
-                        <div class="card mt-4">
+                        <div class="card mt-3">
 
                             <label class="mb-0" for="boy"><img class="card-img-top img-boy-or-girl" src="img/boy.png" alt=""></label>
                             <input class="checkbox-input-boy" type="radio" name="gender" id="boy" value="M">
@@ -252,11 +252,33 @@
                     </div>
                     <div class="col-sm-6 col-lg-3 col-xl-2 mb-2">
                         <div class="card">
+                            <label class="mb-0" for="boloP"><img src="img/food/boloP.png" alt="Bolo Pronto Bauducco" class="card-img-top"></label>
+                            <input type="checkbox" name="food[]" id="boloP" class="checkbox-input" value="boloP"/>
+                            <label for="boloP" class="checkbox-label mb-0  ">
+                                <div class="card-body checkbox-text">
+                                    <p class="checkbox-text--title">Bolo Pronto</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 col-xl-2 mb-2">
+                        <div class="card">
                             <label class="mb-0" for="cereal"><img src="img/food/cereal.png" alt="Cereal" class="card-img-top"></label>
                             <input type="checkbox" name="food[]" id="cereal" class="checkbox-input" value="cereal"/>
                             <label for="cereal" class="checkbox-label mb-0">
                                 <div class="card-body checkbox-text">
                                     <p class="checkbox-text--title">Cereal</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 col-xl-2 mb-2">
+                        <div class="card">
+                            <label class="mb-0" for="cerealN"><img src="img/food/cerealN.png" alt="Cereal Natural" class="card-img-top"></label>
+                            <input type="checkbox" name="food[]" id="cerealN" class="checkbox-input" value="cerealN"/>
+                            <label for="cerealN" class="checkbox-label mb-0">
+                                <div class="card-body checkbox-text">
+                                    <p class="checkbox-text--title">Cereal Natural</p>
                                 </div>
                             </label>
                         </div>
@@ -306,6 +328,17 @@
                     <p class="title-box mr-auto ml-auto mt-2">E para beber?</p>
                 </div>
                 <div class="row mb-2">
+                <div class="col-sm-6 col-lg-3 mb-2">
+                        <div class="card">
+                            <label class="mb-0" for="agua"><img src="img/food/agua.png" alt="Água" class="card-img-top"></label>
+                            <input type="checkbox" name="drink[]" id="agua" class="checkbox-input" value="agua"/>
+                            <label for="agua" class="checkbox-label mb-0">
+                                <div class="card-body checkbox-text">
+                                    <p class="checkbox-text--title">Água</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
                     <div class="col-sm-6 col-lg-3 mb-2">
                         <div class="card">
                             <label class="mb-0" for="iogurte"><img src="img/food/iogurte.png" alt="Iogurte" class="card-img-top"></label>
@@ -363,6 +396,7 @@
                     </div>
                     <div class="col-sm-6 col-lg-3 mb-2">
                         <div class="card">
+                            
                             <label class="mb-0" for="sucoN"><img src="img/food/sucoF.png" alt="Suco da fruta" class="card-img-top"></label>
                             <input type="checkbox" name="drink[]" id="sucoN" class="checkbox-input" value="sucoF"/>
                             <label for="sucoN" class="checkbox-label mb-0">
@@ -394,7 +428,7 @@
                             </label>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-3 mb-2 ml-auto mr-auto">
+                    <div class="col-sm-6 col-lg-3 mb-2 ">
                         <div class="card">
                             <label class="mb-0" for="nadaB"><img src="img/food/noned.png" alt="Copo vazio" class="card-img-top"></label>
                             <input type="checkbox" name="drink[]" id="nadaB" class="checkbox-input" value="noned"/>
@@ -413,13 +447,89 @@
                 
             </div>
         </form>
-        
+
+
+
+<!--   MODAL   -->
+        <div class="modal fade" id="genderModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ops!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Você precisa escolher uma alternativa!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="ageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ops!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Precisamos saber quanto anos você tem!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="foodModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ops!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Você precisa escolher uma alternativa! Caso não coma nada, selecione a última opção.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="drinkModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ops!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Você precisa escolher uma alternativa! Caso não beba nada, selecione a última opção.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="default.js"></script>
         <script src="quiz.js"></script>
     </body>
 </html>

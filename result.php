@@ -43,7 +43,9 @@ $score_list = Array(
     "verdura" => [2, 'v'],  
     "strogonoff" => [1, 'p'],  
     "farofa" => [0, 'm'],
-    "Bolo pronto" => [-2, 'g'],
+    "boloP" => [-2, 'g'],
+    "cerealN" => [1, 'm'],
+    "sopa" => [1, 'v'],
 );
 
 $meal = $_POST['meal'];
@@ -159,9 +161,10 @@ mysqli_query($link, $sql);
                     <?php 
                         if($score > 0) {
                             echo "Parabéns! Sua alimentação está ótima";
-                            echo "<audio src='audio/teste.mp3' autoplay></audio>";
+                            echo "<audio src='audio/yes.m4a' autoplay></audio>";
                         } else {
                             echo "Podemos melhorar...";
+                            echo "<audio src='audio/no.mp3' autoplay></audio>";
                         }
                     ?>
                 </h2>
@@ -244,5 +247,7 @@ mysqli_query($link, $sql);
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <script src="quiz.js"></script>
+        <script src="default.js"></script>
+
     </body>
 </html>

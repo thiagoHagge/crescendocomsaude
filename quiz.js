@@ -1,6 +1,6 @@
 var foodScore
 var drinkScore
-
+var audioError = new Audio('audio/error.mp3')
 
 $("#button-gender").click(function() {          
     var gender = "";
@@ -13,8 +13,10 @@ $("#button-gender").click(function() {
     if (gender != '') {
         $("#boy-or-girl").hide();
         $("#how-old").show();
+        $('html,body').scrollTop(0);
     } else {
-        alert("Você precisa escolher uma alternativa!")
+        audioError.play();
+        setTimeout(function() {$('#genderModal').modal('show');}, 200)
         $("#button-gender").blur();
     }
 })
@@ -30,8 +32,10 @@ $("#button-age").click(function() {
     if (age != '') {
         $("#how-old").hide();
         $("#food-page").show();
+        $('html,body').scrollTop(0);
     } else {
-        alert('Precisamos saber quanto anos você tem!')
+        audioError.play();
+        setTimeout(function() {$('#ageModal').modal('show');}, 200)
         $("#button-age").blur()
     }
     
@@ -52,8 +56,10 @@ $("#button-food").click(function() {
     if (food != "") {
         $("#food-page").hide();
         $("#drink-page").show();
+        $('html,body').scrollTop(0);
     } else {
-        alert("Você precisa escolher uma alternativa! Caso não coma nada, selecione a última opção.")
+        audioError.play();
+        setTimeout(function() {$('#foodModal').modal('show');}, 200)
         $("#button-food").blur();
     }
     
@@ -71,8 +77,10 @@ $("#button-submit").click(function() {
     if (drink != '') {
         $('#form-quiz').submit();
         $("#button-submit").blur();
+
     } else {
-        alert("Você precisa escolher uma alternativa! Caso não coma nada, selecione a última opção.")
+        audioError.play();
+        setTimeout(function() {$('#drinkModal').modal('show');}, 200)
         $("#button-submit").blur();
     }
 })
