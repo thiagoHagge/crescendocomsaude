@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+
         <title>Crescendo com Saúde</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -10,6 +11,7 @@
     </head>
 
     <body>
+        <audio src='audio/background.mp3' autoplay loop></audio>
 
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="menu-nav">
                 <a class="navbar-brand my-0 mr-auto" href="../index.html"><img class="my-0" id="logo" src="../img/nav-logo.png" alt=""></a>
@@ -49,21 +51,25 @@
             </div>
         </nav>
 
-        <div class="container first-content news mb-3">
-            <div class="row news-box">
-                <h2 class="title-box mr-auto ml-auto">Criança pode tomar café?</h2>
-
-                <img class="post-img mr-auto ml-auto" src="../img/post/post01.png" alt="">
-                <p class="text mt-3">
+        <div class="container first-content news mb-3 d-block mr-auto ml-auto">
+            <div class="news-box">
+                <h2 class="title-box mr-auto ml-auto d-block">Criança pode tomar café?</h2>
+                
+                <p class="d-block text text-muted mt-3">
                     A maior parte das crianças não gosta muito de café, mas por ser uma bebida tão consumida no Brasil, essa é uma dúvida frequente dos pais.<br>
                     <h4>As crianças também podem tomar café?</h4><br>
+                </p>
+
+                <img class="post-img" src="../img/post/post01.png" alt="">
+                
+                <p class="d-block text mt-3 ml-2">    
                     Quando pensamos no consumo de café pelas crianças, nossa maior preocupação está associada à cafeína. Por ser uma substância que age como estimulante do sistema nervoso central, se consumida em excesso, pode provocar reações de estresse e comprometer a absorção de alguns nutrientes como ferro e cálcio, e isso pode interferir no crescimento da criança e afetar o seu desenvolvimento como um todo.
                 </p>  
                 <ul>
                     <li class="text">Em excesso, o café ainda aumenta os níveis de atividade das crianças e estimula produção da urina, o que pode interferir na absorção de vitaminas e minerais. Ourtos efeitos como irritação, insônia, dores de estômago e agitação estão relacionados ao elevado consumo de café.</li>
                     ⠀
                     <li class="text">É recomendado que os profissionais de saúde orientem pais e responsáveis sobre os efeitos nocivos do consumo excessivo de produtos contendo cafeína em crianças e adolescentes.</li>
-                </ul>
+                </ul> 
                 <p>Quer mais informações como essa? Siga a <a href="#" class="card-link" data-toggle="modal" data-target="#drana"> Dra. Ana Luiza</a></p><small class="ml-auto">Postado em 26/09/2020</small>
             </div>
         </div>
@@ -100,7 +106,7 @@
 
 
 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <script src="../default.js"></script>

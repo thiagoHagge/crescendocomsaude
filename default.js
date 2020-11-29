@@ -1,5 +1,6 @@
-var audioClick = new Audio('audio/click.mp3')
 
-$('body').click(function () {
-    audioClick.play();
+var audioClick = new Audio('audio/click.m4a')
+
+$("body").click(function () {
+    audioClick.play()
 })

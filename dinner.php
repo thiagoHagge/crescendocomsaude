@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+
         <title>Monte  sua janta</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -12,6 +13,7 @@
 
     <body>
         
+        <audio src='audio/background.mp3' autoplay loop></audio>
 
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="menu-nav">
             
@@ -341,6 +343,17 @@
                     </div>
                     <div class="col-sm-6 col-lg-3 col-xl-2 mb-2">
                         <div class="card">
+                            <label class="mb-0" for="miojo"><img src="img/food/miojo.png" alt="Miojo" class="card-img-top"></label>
+                            <input type="checkbox" name="food[]" id="miojo" class="checkbox-input" value="miojo"/>
+                            <label for="miojo" class="checkbox-label mb-0  ">
+                                <div class="card-body checkbox-text">
+                                    <p class="checkbox-text--title">Miojo</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 col-xl-2 mb-2">
+                        <div class="card">
                             <label class="mb-0" for="fruta"><img src="img/food/fruta.png" alt="Frutas" class="card-img-top"></label>
                             <input type="checkbox" name="food[]" id="fruta" class="checkbox-input" value="fruta"/>
                             <label for="fruta" class="checkbox-label mb-0  ">
@@ -637,7 +650,7 @@
         
 
 <!-- SCRIPTS -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <script src="quiz.js"></script>
