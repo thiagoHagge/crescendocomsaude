@@ -1,9 +1,12 @@
 # Crescendo com Saúde (Growing Healthy)
-![crescendocomsaude_landingpage](https://user-images.githubusercontent.com/67560667/100820842-e419c980-342d-11eb-82b3-f1db07e3311b.png)
-![crescendocomsaude_quiz1](https://user-images.githubusercontent.com/67560667/100820847-e54af680-342d-11eb-8384-d0b3ab530750.png)
-![crescendocomsaude_quiz2](https://user-images.githubusercontent.com/67560667/100820848-e54af680-342d-11eb-86fa-e45c013bae91.png)
 
 This project aims to help children improve their diet through easy language and a questionnaire to assess whether their diet is good or can be improved.
+
+![crescendocomsaude_landingpage](https://user-images.githubusercontent.com/67560667/100820842-e419c980-342d-11eb-82b3-f1db07e3311b.png?w=512)
+![crescendocomsaude_quiz1](https://user-images.githubusercontent.com/67560667/100820847-e54af680-342d-11eb-8384-d0b3ab530750.png?w=512)
+![crescendocomsaude_quiz2](https://user-images.githubusercontent.com/67560667/100820848-e54af680-342d-11eb-86fa-e45c013bae91.png?w=512)
+
+
 
 This was my first real PHP project.
 So I was able to learn a lot about how to develop with this language and especially how to develop dynamic pages (to show the result of the quiz) and how to store information in databases (so that medical students can make analyzes from this information).
