@@ -2,7 +2,7 @@
 
 This project aims to help children improve their diet through easy language and a questionnaire to assess whether their diet is good or can be improved.
 
-![crescendocomsaude_landingpage](https://user-images.githubusercontent.com/67560667/100820842-e419c980-342d-11eb-82b3-f1db07e3311b.png?w=512)
+![crescendocomsaude_landingpage](https://user-images.githubusercontent.com/67560667/100820842-e419c980-342d-11eb-82b3-f1db07e3311b.png?w=12)
 ![crescendocomsaude_quiz1](https://user-images.githubusercontent.com/67560667/100820847-e54af680-342d-11eb-8384-d0b3ab530750.png?w=512)
 ![crescendocomsaude_quiz2](https://user-images.githubusercontent.com/67560667/100820848-e54af680-342d-11eb-86fa-e45c013bae91.png?w=512)
 
