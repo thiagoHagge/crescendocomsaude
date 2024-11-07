@@ -57,7 +57,7 @@
     $food = '';
     $drink = '';
     $score = 0;
-    $checkType;
+    $checkType = false;
     $eatAll = false;
     $eatP = false;
     $eatV = false;
@@ -127,7 +127,7 @@
             eachImg($type);
         }
         if($checkType){
-            echo '<img class="self-food" src="img/food/null.png" alt="Nada">';
+            echo '<img class="self-food" src="../img/food/null.png" alt="Nada">';
             
         }
     }
@@ -158,20 +158,20 @@
         <title>Resultado - Crescendo com Saúde</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <link rel="stylesheet" href="styles/quiz.css">
-        <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" href="styles/result.css">
+        <link rel="stylesheet" href="../styles/quiz.css">
+        <link rel="stylesheet" href="../styles/main.css">
+        <link rel="stylesheet" href="../styles/result.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;531;600;700;800;900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap" rel="stylesheet">
     </head>
 
     <body>
         
-    <audio src='audio/background.mp3' autoplay loop></audio>
+    <audio src='../audio/background.mp3' autoplay loop></audio>
 
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="menu-nav">
             
-            <a class="navbar-brand mr-auto" href="index.html"><img id="logo" src="img/nav-logo.png" alt=""></a>
+            <a class="navbar-brand mr-auto" href="../index.html"><img id="logo" src="../img/nav-logo.png" alt=""></a>
             
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
                 <span class="navbar-toggler-icon"></span>
@@ -185,16 +185,16 @@
                             Quiz
                         </a>
                         <div class="dropdown-menu" id="drop-quiz" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item " id="drop-itens" href="letsbreakfast.html">Monte o seu café da manhã</a>
-                            <a class="dropdown-item" id="drop-itens" href="letslunch.html">Monte o seu almoço</a>
-                            <a class="dropdown-item" id="drop-itens" href="letsdinner.html">Monte o seu jantar</a>
+                            <a class="dropdown-item " id="drop-itens" href="../letsbreakfast.html">Monte o seu café da manhã</a>
+                            <a class="dropdown-item" id="drop-itens" href="../letslunch.html">Monte o seu almoço</a>
+                            <a class="dropdown-item" id="drop-itens" href="../letsdinner.html">Monte o seu jantar</a>
                         </div>
                     </li>
                     <li class="nav-item active mr-5">
-                        <a class="nav-link" href="feed.html">Alimentação <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="../feed.html">Alimentação <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item mr-5 active">
-                        <a class="nav-link" href="about_us.html">Quem somos <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="../about_us.html">Quem somos <span class="sr-only">(current)</span></a>
                     </li>
                     <li>
                         <form class="form-inline my-2 my-lg-0">
@@ -217,11 +217,11 @@
                 
                     <?php 
                         if($score > 0 and $eatAll) {
-                            echo "<h2 class='title-box mr-auto ml-auto' style='background-image: url(img/confetti.gif); height: 4rem;font-size:40px;'>Parabéns! Sua alimentação está ótima</h2>";
-                            echo "<audio src='audio/yes.m4a' autoplay></audio>";
+                            echo "<h2 class='title-box mr-auto ml-auto' style='background-image: url(../img/confetti.gif); height: 4rem;font-size:40px;'>Parabéns! Sua alimentação está ótima</h2>";
+                            echo "<audio src='../audio/yes.m4a' autoplay></audio>";
                         } else {
                             echo "<h2 class='title-box mr-auto ml-auto' style='font-size:40px;display:inline'>Podemos melhorar...</h2>";
-                            echo "<audio src='audio/no.mp3' autoplay></audio>";
+                            echo "<audio src='../audio/no.mp3' autoplay></audio>";
                         }
                     ?>
                 
@@ -298,7 +298,7 @@
                     <div class="card">
                         <div class="card-body">
                             <a href="#" data-toggle="modal" data-target="#imgPyramid">
-                                <img class="f-left" src="img/piramide.png" alt="Pirâmide alimentar" id="piramide">
+                                <img class="f-left" src="../img/piramide.png" alt="Pirâmide alimentar" id="piramide">
                             </a>
                         
                             <p>
@@ -328,15 +328,15 @@
                             <h5>Exemplos de naturais ou pouco processados que devem ser preferidos:</h5>
                             <div class="example-line text-center">
                                 <?php
-                                    $exampleNB = '<img class="self-food" src="img/food/fruta.png" alt="Fruta">
-                                    <img class="self-food" src="img/food/ovo.png" alt="Ovo">
-                                    <img class="self-food" src="img/food/leite.png" alt="Leite">';
-                                    $exampleNL = '<img class="self-food" src="img/food/verdura.png" alt="Verdura">
-                                    <img class="self-food" src="img/food/arroz.png" alt="Arroz">
-                                    <img class="self-food" src="img/food/feijao.png" alt="Feijão">';
-                                    $exampleND = '<img class="self-food" src="img/food/sucoF.png" alt="Suco de Fruta">
-                                    <img class="self-food" src="img/food/carne.png" alt="carne">
-                                    <img class="self-food" src="img/food/macarrao.png" alt="Macarrão">';
+                                    $exampleNB = '<img class="self-food" src="../img/food/fruta.png" alt="Fruta">
+                                    <img class="self-food" src="../img/food/ovo.png" alt="Ovo">
+                                    <img class="self-food" src="../img/food/leite.png" alt="Leite">';
+                                    $exampleNL = '<img class="self-food" src="../img/food/verdura.png" alt="Verdura">
+                                    <img class="self-food" src="../img/food/arroz.png" alt="Arroz">
+                                    <img class="self-food" src="../img/food/feijao.png" alt="Feijão">';
+                                    $exampleND = '<img class="self-food" src="../img/food/sucoF.png" alt="Suco de Fruta">
+                                    <img class="self-food" src="../img/food/carne.png" alt="carne">
+                                    <img class="self-food" src="../img/food/macarrao.png" alt="Macarrão">';
                                     forMeal($exampleNB, $exampleNL, $exampleND);
                                 ?>
                                
@@ -346,14 +346,14 @@
                             <h5>Exemplo de processados que devem ser comidos de vez em quando:</h5>
                             <div class="example-line text-center">
                                 <?php
-                                    $examplePB = '<img class="self-food" src="img/food/pao.png" alt="pao">
-                                    <img class="self-food" src="img/food/queijo.png" alt="Queijo">
-                                    <img class="self-food" src="img/food/granola.png" alt="Granola">';
-                                    $examplePL = '<img class="self-food" src="img/food/pao.png" alt="Pão">
-                                    <img class="self-food" src="img/food/queijo.png" alt="Queijo">';
-                                    $examplePD = '<img class="self-food" src="img/food/pao.png" alt="Pão">
-                                    <img class="self-food" src="img/food/queijo.png" alt="Queijo">
-                                    <img class="self-food" src="img/food/paodequeijo.png" alt="Pão de Queijo">';
+                                    $examplePB = '<img class="self-food" src="../img/food/pao.png" alt="pao">
+                                    <img class="self-food" src="../img/food/queijo.png" alt="Queijo">
+                                    <img class="self-food" src="../img/food/granola.png" alt="Granola">';
+                                    $examplePL = '<img class="self-food" src="../img/food/pao.png" alt="Pão">
+                                    <img class="self-food" src="../img/food/queijo.png" alt="Queijo">';
+                                    $examplePD = '<img class="self-food" src="../img/food/pao.png" alt="Pão">
+                                    <img class="self-food" src="../img/food/queijo.png" alt="Queijo">
+                                    <img class="self-food" src="../img/food/paodequeijo.png" alt="Pão de Queijo">';
                                     forMeal($examplePB, $examplePL, $examplePD);
                                 ?>
                             </div>
@@ -362,15 +362,15 @@
                             <h5>Exemplo de ultraprocessados que devem ser evitados:</h5>
                             <div class="example-line text-center">
                                 <?php
-                                    $exampleUB = '<img class="self-food" src="img/food/biscoitoR.png" alt="Biscoito Recheado">
-                                    <img class="self-food" src="img/food/toddy.png" alt="Toddy">
-                                    <img class="self-food" src="img/food/presunto.png" alt="Presunto">';
-                                    $exampleUL = '<img class="self-food" src="img/food/refri.png" alt="Refrigerante">
-                                    <img class="self-food" src="img/food/miojo.png" alt="Miojo">
-                                    <img class="self-food" src="img/food/nugget.png" alt="Nugget">';
-                                    $exampleUD = '<img class="self-food" src="img/food/salgadinho.png" alt="Salgadinho">
-                                    <img class="self-food" src="img/food/nugget.png" alt="Nugget">
-                                    <img class="self-food" src="img/food/refri.png" alt="Refrigerante">';
+                                    $exampleUB = '<img class="self-food" src="../img/food/biscoitoR.png" alt="Biscoito Recheado">
+                                    <img class="self-food" src="../img/food/toddy.png" alt="Toddy">
+                                    <img class="self-food" src="../img/food/presunto.png" alt="Presunto">';
+                                    $exampleUL = '<img class="self-food" src="../img/food/refri.png" alt="Refrigerante">
+                                    <img class="self-food" src="../img/food/miojo.png" alt="Miojo">
+                                    <img class="self-food" src="../img/food/nugget.png" alt="Nugget">';
+                                    $exampleUD = '<img class="self-food" src="../img/food/salgadinho.png" alt="Salgadinho">
+                                    <img class="self-food" src="../img/food/nugget.png" alt="Nugget">
+                                    <img class="self-food" src="../img/food/refri.png" alt="Refrigerante">';
                                     forMeal($exampleUB, $exampleUL, $exampleUD);
                                 ?>
                             </div>
@@ -414,55 +414,55 @@
                             <?php
                                 $tipFB = '<div class="col-md-4">
                                             <figure class="tip-family">
-                                                <img src="img/tip1B.png" alt="Família almoçando junta" style="width:100%">
+                                                <img src="../img/tip1B.png" alt="Família almoçando junta" style="width:100%">
                                                 <figcaption>Comer preferencialmente em família</figcaption>
                                             </figure>
                                         </div>
                                         <div class="col-md-4">
                                             <figure class="tip-family">
-                                                <img src="img/tip2B.png" alt="Irmãs dividindo uma melancia" style="width:100%">
+                                                <img src="../img/tip2B.png" alt="Irmãs dividindo uma melancia" style="width:100%">
                                                 <figcaption>Estimular repartição e compartilhamento dos alimentos</figcaption>
                                             </figure>
                                         </div>
                                         <div class="col-md-4">
                                             <figure class="tip-family">
-                                                <img src="img/tip3B.png" alt="Mãe e filhas cozinhando juntas" style="width:100%">
+                                                <img src="../img/tip3B.png" alt="Mãe e filhas cozinhando juntas" style="width:100%">
                                                 <figcaption>Preparar as refeições em família e dividir tarefas</figcaption>
                                             </figure>
                                         </div>';
                                 $tipFL = '<div class="col-md-4">
                                             <figure class="tip-family">
-                                                <img src="img/tip1L.png" alt="Família almoçando junta" style="width:100%">
+                                                <img src="../img/tip1L.png" alt="Família almoçando junta" style="width:100%">
                                                 <figcaption>Comer preferencialmente em família</figcaption>
                                             </figure>
                                         </div>
                                         <div class="col-md-4">
                                             <figure class="tip-family">
-                                                <img src="img/tip2L.png" alt="Irmãs dividindo uma melancia" style="width:100%">
+                                                <img src="../img/tip2L.png" alt="Irmãs dividindo uma melancia" style="width:100%">
                                                 <figcaption>Estimular repartição e compartilhamento dos alimentos</figcaption>
                                             </figure>
                                         </div>
                                         <div class="col-md-4">
                                             <figure class="tip-family">
-                                                <img src="img/tip3L.png" alt="Mãe e filhas cozinhando juntas" style="width:100%">
+                                                <img src="../img/tip3L.png" alt="Mãe e filhas cozinhando juntas" style="width:100%">
                                                 <figcaption>Preparar as refeições em família e dividir tarefas</figcaption>
                                             </figure>
                                         </div>';
                                 $tipFD = '<div class="col-md-4">
                                             <figure class="tip-family">
-                                                <img src="img/tip1D.png" alt="Família jantando junta" style="width:100%">
+                                                <img src="../img/tip1D.png" alt="Família jantando junta" style="width:100%">
                                                 <figcaption>Comer preferencialmente em família</figcaption>
                                             </figure>
                                         </div>
                                         <div class="col-md-4">
                                             <figure class="tip-family">
-                                                <img src="img/tip2D.png" alt="Irmãos dividindo um sanduíche" style="width:100%">
+                                                <img src="../img/tip2D.png" alt="Irmãos dividindo um sanduíche" style="width:100%">
                                                 <figcaption>Estimular repartição e compartilhamento dos alimentos</figcaption>
                                             </figure>
                                         </div>
                                         <div class="col-md-4">
                                             <figure class="tip-family">
-                                                <img src="img/tip3D.png" alt="Pai e mãe cozinhado junto com sua filhinha" style="width:100%">
+                                                <img src="../img/tip3D.png" alt="Pai e mãe cozinhado junto com sua filhinha" style="width:100%">
                                                 <figcaption>Preparar as refeições em família e dividir tarefas</figcaption>
                                             </figure>
                                         </div>';
@@ -482,11 +482,11 @@
             <div class="row">
                 <?php 
                     if($meal == 'B') {
-                        echo "<a href='lunch.php' class='btn btn-success btn-quiz my-3 ml-auto mr-5 '>Agora conte-nos sobre seu almoço</a>";
+                        echo "<a href='api/lunch.php' class='btn btn-success btn-quiz my-3 ml-auto mr-5 '>Agora conte-nos sobre seu almoço</a>";
                     }   elseif ($meal == 'L') {
-                        echo "<a href='dinner.php' class='btn btn-primary btn-quiz my-3 ml-auto mr-5    '>Agora conte-nos sobre seu jantar</a>";
+                        echo "<a href='api/dinner.php' class='btn btn-primary btn-quiz my-3 ml-auto mr-5    '>Agora conte-nos sobre seu jantar</a>";
                     }   elseif ($meal == 'D') {
-                        echo "<a href='breakfast.php' class='btn btn-danger btn-quiz my-3 ml-auto mr-5  '>Agora conte-nos sobre seu café da manhã</a>";
+                        echo "<a href='api/breakfast.php' class='btn btn-danger btn-quiz my-3 ml-auto mr-5  '>Agora conte-nos sobre seu café da manhã</a>";
                     }
                 ?>
             </div>
@@ -504,7 +504,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <img src="img/piramide.png" style="width: 100%" alt="Pirâmide alimentar">
+                            <img src="../img/piramide.png" style="width: 100%" alt="Pirâmide alimentar">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Já <a href=""></a>prendi!!</button>
@@ -519,8 +519,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-        <script src="quiz.js"></script>
-        <script src="default.js"></script>
+        <script src="../quiz.js"></script>
+        <script src="../default.js"></script>
         <script>
             $(function () {
                 $('[data-toggle="popover"]').popover()
