@@ -1,5 +1,5 @@
 <?php
-    require_once('db.php');
+//    require_once('db.php');
 
     $score_list = Array(
         "agua" => [1, ''],
@@ -146,11 +146,11 @@
 
 
 
-    $objDb = new db();
-    $link = $objDb->connect_mysql();
-    $sql = " insert into alimentacao(refeicao, sexo, idade, comida, bebida, score) values ('$meal', '$gender', '$age', '$food', '$drink', '$score') ";
-
-    mysqli_query($link, $sql);
+//    $objDb = new db();
+//    $link = $objDb->connect_mysql();
+//    $sql = " insert into alimentacao(refeicao, sexo, idade, comida, bebida, score) values ('$meal', '$gender', '$age', '$food', '$drink', '$score') ";
+//
+//    mysqli_query($link, $sql);
 ?>
 <!DOCTYPE html>
 <html>
@@ -482,11 +482,11 @@
             <div class="row">
                 <?php 
                     if($meal == 'B') {
-                        echo "<a href='api/lunch.php' class='btn btn-success btn-quiz my-3 ml-auto mr-5 '>Agora conte-nos sobre seu almoço</a>";
+                        echo "<a href='../lunch.html' class='btn btn-success btn-quiz my-3 ml-auto mr-5 '>Agora conte-nos sobre seu almoço</a>";
                     }   elseif ($meal == 'L') {
-                        echo "<a href='api/dinner.php' class='btn btn-primary btn-quiz my-3 ml-auto mr-5    '>Agora conte-nos sobre seu jantar</a>";
+                        echo "<a href='../dinner.html' class='btn btn-primary btn-quiz my-3 ml-auto mr-5    '>Agora conte-nos sobre seu jantar</a>";
                     }   elseif ($meal == 'D') {
-                        echo "<a href='api/breakfast.php' class='btn btn-danger btn-quiz my-3 ml-auto mr-5  '>Agora conte-nos sobre seu café da manhã</a>";
+                        echo "<a href='../breakfast.html' class='btn btn-danger btn-quiz my-3 ml-auto mr-5  '>Agora conte-nos sobre seu café da manhã</a>";
                     }
                 ?>
             </div>
