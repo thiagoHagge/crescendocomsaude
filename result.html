@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Resultado - Crescendo com Saúde</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles/quiz.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/result.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;531;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+    <audio src='audio/background.mp3' autoplay loop></audio>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="menu-nav">
+            
+            <a class="navbar-brand mr-auto" href="index.html"><img id="logo" src="img/nav-logo.png" alt=""></a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ml-auto">
+                    
+                    <li class="nav-item active dropdown mr-5">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Quiz
+                        </a>
+                        <div class="dropdown-menu" id="drop-quiz" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item " id="drop-itens" href="letsbreakfast.html">Monte o seu café da manhã</a>
+                            <a class="dropdown-item" id="drop-itens" href="letslunch.html">Monte o seu almoço</a>
+                            <a class="dropdown-item" id="drop-itens" href="letsdinner.html">Monte o seu jantar</a>
+                        </div>
+                    </li>
+                    <li class="nav-item active mr-5">
+                        <a class="nav-link" href="feed.html">Alimentação <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mr-5 active">
+                        <a class="nav-link" href="about_us.html">Quem somos <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+                
+            
+        </nav>
+        <div class="container first-content">
+          <div class="row">
+            <div class="col-12" id="resultado">
+            </div>
+          </div>
+          <div class="row main-title">
+              <h1 style="background: #ffffff98; display:inline">Resultados</h1>
+          </div>
+            <div class="card my-3 mr-auto ml-auto" style="background:#ffffffc8">
+                <div class="row">
+                    <div class="card-body">
+                        <h2>Você escolheu:</h2>
+                        <div class="col-12">
+                            <div class="food-line" id="img1">
+                                <h4>Gordura e açúcares</h4>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-2">
+                            <div class="food-line" id="img2">
+                                <h4>Leite e seus derivados, carne, ovos e leguminosas (feijões)</h4>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-2">
+                            <div class="food-line" id="img3">
+                                <h4>Frutas e verduras</h4>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-2">
+                            <div class="food-line" id="img4">
+                                <h4>Cereais, tubérculos, raízes e massas</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-2 d-block">
+                <h3 class="title-box mr-auto ml-auto" style="width:90%" id="img5">
+                </h3>
+                <div class="row news">
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="#" data-toggle="modal" data-target="#imgPyramid">
+                                <img class="f-left" src="img/piramide.png" alt="Pirâmide alimentar" id="piramide">
+                            </a>
+                            <p>
+                                Para ter uma alimentação saudável, temos que comer todos os grupos alimentares no dia, distribuídos dentro das nossas refeições nas porções recomendadas para a nossa idade.
+                            </p>
+                            <p>
+                                Quando comemos muito de um grupo e não comemos do outro, estamos deixando de adquirir nutrientes que são importantes para ficarmos grandes e saudáveis! 
+                            </p>
+                            <p>
+                                Quando pensamos no que comer, devemos saber classificar os <a tabindex="0" type="button" class="badge badge-warning" data-toggle="popover" data-trigger="focus" data-placement="top" title="O que são alimentos naturais e pouco processados?" data-content="Alimentos naturais ou in natura são obtidos diretamente de plantas ou de animais e não sofrem qualquer alteração após deixar a natureza. Já os alimentos pouco processados são os alimentos in natura que passaram por processos diversos, mas que não tiveram outras substâncias acrescentadas.">alimentos naturais e pouco processados</a>, esses são os alimentos na sua forma mais natural, por isso têm mais nutrientes para nos dar mais força. Devemos sempre preferi-los.
+                            </p>
+                            <p>
+                                Os chamados de <a tabindex="0" type="button" class="badge badge-warning" data-toggle="popover" data-trigger="focus" data-placement="top" title="O que são alimentos processados?" data-content="Os alimentos processados são fabricados a partir de alimentos naturais e tem sal ou açúcar ou outra substância para fazer com que durem mais tempo e sejam mais gostosos.">processados</a> tem açúcar e sal acrescentados a sua composição. Devemos consumir menos.
+                            </p>
+                            <p>
+                                Já os <a tabindex="0" type="button" class="badge badge-warning" data-toggle="popover" data-trigger="focus" data-placement="top" title="O que são alimentos ultraprocessados?" data-content="Os alimentos ultraprocessados são alimentos industriais feitos praticamente só de substâncias como óleos, gorduras, açúcar, amido e proteínas; ou derivadas dessas substâncias, como gorduras hidrogenadas, amido modificado; eles também podem ser feitos de substâncias feitas em laboratório, como corantes, aromatizantes, realçadores de sabor e vários coisas que tornam o alimento mais colorido e saboroso.">ultraprocessados</a> são os alimentos em que são acrescentados o açúcar, sal, gordura e cores ou conservantes artificiais, além de outras coisas. Devemos evitar-los.
+                            </p>
+                            <small>Para entender melhor, clique nos nomes marcados.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-3">
+                <div class="row">
+                    <div class="card-body">
+                        <div class="col-12">
+                            <h5>Exemplos de naturais ou pouco processados que devem ser preferidos:</h5>
+                            <div class="example-line text-center" id="img6">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <h5>Exemplo de processados que devem ser comidos de vez em quando:</h5>
+                            <div class="example-line text-center" id="img7">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <h5>Exemplo de ultraprocessados que devem ser evitados:</h5>
+                            <div class="example-line text-center" id="img8">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-3" id="tip">
+                <div class="row">
+                    <div class="card-body">
+                        <div class="row mx-2" id="img9">
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <div>
+                        <div class="row text-center mt-5" id="img10">
+                            <div class="col-12">
+
+                                <h3 class="title-box mx-auto" style="width:90%">Para ter uma boa relação com a comida e ser saudável, além de prestar atenção nos alimentos, também é importante:</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 mx-auto mt-2 text-center">
+                <h3 class="title-box">Para saber mais, assista o vídeo</h3>
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/r6ih9ti9lsc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="row" id="img11">
+            </div>
+    
+        </div>
+
+        <!-- MODAL -->
+            <div class="modal fade" id="imgPyramid" aria-hidden="true" tabindex="-1">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Pirâmide Alimentar</h5>
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span>x</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="img/piramide.png" style="width: 100%" alt="Pirâmide alimentar">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Já <a href=""></a>prendi!!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="quiz.js"></script>
+        <script src="default.js"></script>
+        <script>
+            $(function () {
+                $('[data-toggle="popover"]').popover()
+            })
+        </script>
+
+    </body>
+</html>
